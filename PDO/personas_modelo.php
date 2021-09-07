@@ -60,10 +60,8 @@ class Personas_Model extends Conexion
             if (!$con) {
                 echo "<h3>No se ha podido conectar PHP - MySQL, verifique sus datos.</h3><hr><br>";
             } else {
-                echo "<br>==========================================================================";
                 echo "<h3> Ejecución de Consulta SQL para obtener datos </h3><hr><br>";
-                echo "<br>==========================================================================";
-
+                
                 $consulta = "SELECT * FROM persona";
                 $resultado = $con->query($consulta);
 
@@ -105,9 +103,7 @@ class Personas_Model extends Conexion
 
                 echo "<h3>No se ha podido conectar PHP - MySQL, verifique sus datos.</h3><hr><br>";
             } else {
-                echo "<br>==========================================================================";
                 echo "<h3> Ejecución de un Procedimiento Almacenado para obtener datos </h3><hr><br>";
-                echo "<br>==========================================================================";
 
 
 
@@ -135,8 +131,7 @@ class Personas_Model extends Conexion
             echo 'Falló la conexión: ' . $e->getMessage();
         }
 
-        echo "<br>===============================================================";
-        echo "<br>===============================================================";
+
     }
 
     public static function Agregar_Persona_SP($cedula, $n1, $n2, $a1, $a2, $fnac)
